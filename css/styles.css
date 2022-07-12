@@ -270,7 +270,7 @@ body {
   justify-content: center;
   border: 1.5rem solid #333;
   width: 40%;
-  background: url("/imagem/bgabout3500.jpg") center center no-repeat;
+  background: url("imagem/bgabout3500.jpg") center center no-repeat;
   background-size: cover;
 }
 
