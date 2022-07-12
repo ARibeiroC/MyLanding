@@ -1,0 +1,33 @@
+@mixin reset
+   padding: 0
+   margin: 0
+   box-sizing: border-box
+   text-decoration: none
+   list-style: none
+   font-family: Montserrat, sans-serif
+   font-size: 1rem
+
+@mixin flex-align($align, $justify)
+   display: flex
+   align-items: #{$align}
+   justify-content: #{$justify}
+
+@mixin bg-img($img)
+   background: url('../imagem/works/#{$img}') no-repeat center
+   background-size: 200%
+   filter: grayscale(100%)
+   transition: .6s
+
+   &:hover
+      background-size: 210%
+      filter: none
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../imagem/works/#{$img}')
+
+
+
+// =========================================================================================================
+// BREAKPOINTS
+// =========================================================================================================
+@mixin break($device)
+    @media (max-width: #{$device})
+        @content   
