@@ -2,34 +2,175 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
   font-family: Montserrat, sans-serif;
-  font-size: 1rem;
 }
 
 html {
   height: 100vh;
 }
+@media (max-width: 425px) {
+  html body {
+    margin: 0;
+    padding: 0;
+  }
+  html #header {
+    height: 10vh;
+    background: #1E90FF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html #header-navbar {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  html #header-navbar-logo {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+  }
+  html #header-navbar-logo img {
+    display: none;
+  }
+  html #header-navbar-logo h2 {
+    font-size: 1rem;
+    color: white;
+  }
+  html #header-navbar-hamburger {
+    display: flex;
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  html #header-navbar-hamburger span {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 0.5rem;
+    height: 100%;
+    cursor: pointer;
+  }
+  html #header-navbar-menu {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+    position: fixed;
+    background: rgba(3, 131, 170, 0.9254901961);
+    top: 8vh;
+    left: -100%;
+    width: 100%;
+    height: 92vh;
+    list-style: none;
+    border: 1px solid red;
+  }
+  html #header-navbar-menu li {
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+  }
+  html #header-navbar-menu li a {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+  html #header-navbar-menu li a:hover {
+    background: #1E90FF;
+    text-decoration: underline;
+  }
+  html #header-navbar-menu.open {
+    left: 0;
+  }
+  html #bk1 {
+    background: rgba(0, 0, 0, 0.9098039216);
+    padding: 0.5rem 0;
+    border: 1px solid red;
+    height: 100%;
+  }
+  html #bk1 .tittle {
+    height: 20%;
+    padding: 0.5rem 0;
+    border: 1px solid white;
+  }
+  html #bk1 .tittle h1 {
+    font-size: 2.5rem;
+    text-shadow: 0px 0px 1.5rem;
+  }
+  html #bk1 .subtittle {
+    border: 1px solid white;
+    height: 20%;
+  }
+  html #bk1 .subtittle h2 {
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 1.5rem;
+  }
+  html #bk1 #text {
+    border: 1px solid white;
+    height: 40%;
+  }
+  html #bk1 #text p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  html #bk1 #button {
+    border: 1px solid white;
+    height: 20%;
+  }
+  html #bk1 #button button {
+    width: 50%;
+  }
+  html #bk2 {
+    flex-direction: column;
+  }
+  html #bk2 #sobremim-header h2 {
+    font-size: 2rem;
+  }
+  html #bk2 #sobremim-section-descricao p {
+    font-size: 1rem;
+  }
+  html #bk2 #sobremim-footer-conhecimentos .sobremim-footer-content .sobremim-footer-content-info {
+    font-size: 0.6rem;
+  }
+  html .bk3 {
+    display: none;
+  }
+  html .footer {
+    display: none;
+  }
+}
 
 body {
   display: flex;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
-  height: 100vh;
-  color: #000;
+  height: 100%;
+  color: #000000;
   background: url("../imagem/headerbg1300.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
-#main-content {
+#main {
   display: flex;
   flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 
 #header {
@@ -57,13 +198,13 @@ body {
 #header-navbar-logo img {
   width: 20%;
   border-radius: 50%;
-  border: 3px solid #00F5FF;
+  border: 3px solid #1E90FF;
 }
 #header-navbar-logo h2 {
   font-size: 2rem;
   font-weight: bold;
   widows: 80%;
-  color: #00F5FF;
+  color: #1E90FF;
 }
 #header-navbar-hamburger {
   display: none;
@@ -74,16 +215,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  list-style: none;
   margin-right: 2em;
 }
 #header-navbar-menu a {
-  color: #bebebe;
+  color: #fff;
   font-weight: bolder;
   font-size: 1.2em;
   transition-duration: 0.2s;
+  text-decoration: none;
 }
 #header-navbar-menu a:hover {
-  color: #00F5FF;
+  color: #1E90FF;
   text-decoration: underline;
   transition-duration: 0.2s;
 }
@@ -106,7 +249,7 @@ body {
   height: 10vh;
 }
 #bk1 .tittle h1 {
-  color: #00F5FF;
+  color: #1E90FF;
   font-size: 4rem;
   text-shadow: 0px 0px 3.5rem;
   width: 100%;
@@ -138,7 +281,7 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 1.5rem;
-  color: #bebebe;
+  color: #fff;
   width: 60%;
 }
 #bk1 #button {
@@ -155,21 +298,22 @@ body {
   background: #1E90FF;
   border: none;
   border-radius: 10px;
-  color: #000;
+  color: #fff;
   font-size: 1.5em;
   font-weight: bold;
 }
 #bk1 #button button:hover {
   background: #00F5FF;
+  color: #000000;
 }
 
 #bk2 {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #333;
-  color: #bebebe;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  color: #fff;
+  padding: 0.5rem 0.5rem 0 0.5rem;
 }
 #bk2 #sobremim {
   display: flex;
@@ -261,7 +405,7 @@ body {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #bebebe;
+  color: #fff;
 }
 #bk2 #img-eu {
   display: flex;
@@ -307,7 +451,7 @@ body {
   flex-direction: column;
   width: 30%;
   height: 50%;
-  border: 1px solid #000;
+  border: 1px solid #000000;
 }
 .bk3-container-item-bg {
   width: 100%;
@@ -370,7 +514,7 @@ body {
   padding: 1rem 2rem;
   font-size: 0.9rem;
   font-weight: bold;
-  color: #000;
+  color: #000000;
   text-shadow: 2px 2px 5px #00F5FF;
 }
 .footer-info-contacts {

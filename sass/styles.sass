@@ -1,5 +1,6 @@
 @import 'mixins'
 @import 'variables'
+@import 'device-g'
 
 // RESET CONFIGURATION PAGE
 *
@@ -7,20 +8,22 @@
 
 html
     height: 100vh
+    @include device-g()
 
 body
     display: flex
-    @include flex-align(center, flex-start)
     flex-direction: column
-    height: 100vh
-    color: $defaut-text-color
+    height: 100%
+    color: $default-text-color
     background: url('../imagem/headerbg1300.jpg') no-repeat center center fixed
     background-size: cover
 
-#main-content
+#main
     display: flex
     flex-direction: column
-    @include flex-align(center, center)
+    width: 100%
+    height: 100%
+    padding: 0
 
 #header
     display: flex
@@ -30,7 +33,7 @@ body
     width: 100%
     height: 20vh
     background: rgba(0,0 ,0 , 0.5 )
-    
+
     &-navbar
         display: flex
         @include flex-align(center, space-between)
@@ -47,14 +50,13 @@ body
             img
                 width: 20%
                 border-radius: 50%
-                border: 3px solid $primary-color
+                border: 3px solid $tittle-text-color
 
             h2
                 font-size: 2rem
                 font-weight: bold
                 widows: 80%
-                color: $primary-color
-
+                color: $tittle-text-color
 
         &-hamburger
             display: none
@@ -63,6 +65,8 @@ body
             display: flex
             gap: 2em
             @include flex-align(center, flex-end)
+            list-style: none
+
             
             margin-right: 2em
 
@@ -71,9 +75,10 @@ body
                 font-weight: bolder
                 font-size: 1.2em
                 transition-duration: 0.2s
+                text-decoration: none
 
             a:hover
-                color: $primary-color
+                color: $tittle-text-color
                 text-decoration: underline
                 transition-duration: 0.2s
 
@@ -81,9 +86,8 @@ body
     display: flex
     flex-direction: column
     @include flex-align(center, start)
-    //justify-content: 
 
-    height: 80vh
+    height: calc(100vh - 20vh)
     background: rgba(0,0 ,0 , 0.5 )
 
     .tittle
@@ -95,7 +99,7 @@ body
 
 
         h1
-            color: $primary-color
+            color: $tittle-text-color
             font-size: 4rem
             text-shadow: 0px 0px 3.5rem
             width: 100%
@@ -141,21 +145,22 @@ body
             background: $tittle-text-color
             border: none
             border-radius: 10px
-            color: $defaut-text-color
+            color: $secundary-text-color
             font-size: 1.5em
             font-weight: bold
 
         button:hover
             background: $primary-color
+            color: $default-text-color
 
 #bk2
     display: flex
 
     width: 100%
-    height: 100vh
+    height: 100%
     background: #333
     color: $secundary-text-color
-    padding: 0.5rem 0.5rem 0.5rem 1rem
+    padding: 0.5rem 0.5rem 0 0.5rem
 
     #sobremim
         display: flex
@@ -290,7 +295,7 @@ body
             flex-direction: column
             width: 30%
             height: 50%
-            border: 1px solid $defaut-text-color
+            border: 1px solid $default-text-color
 
             &-bg
                 width: 100%
@@ -328,7 +333,7 @@ body
         padding: 1rem 2rem
         font-size: 0.9rem
         font-weight: bold
-        color: $defaut-text-color
+        color: $default-text-color
         text-shadow: 2px 2px 5px $primary-color
 
         &-contacts
