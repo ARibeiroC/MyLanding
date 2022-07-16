@@ -13,7 +13,6 @@ html
 body
     display: flex
     flex-direction: column
-    height: 100%
     color: $default-text-color
     background: url('../imagem/headerbg1300.jpg') no-repeat center center fixed
     background-size: cover
@@ -100,7 +99,7 @@ body
 
         h1
             color: $tittle-text-color
-            font-size: 4rem
+            font-size: 400%
             text-shadow: 0px 0px 3.5rem
             width: 100%
             text-align: center
@@ -116,7 +115,7 @@ body
             text-align: center
             text-shadow: 0px 0px 3.5rem
             color: $secundary-color
-            font-size: 2rem
+            font-size: 200%
 
     #text
         display: flex
@@ -158,7 +157,7 @@ body
 
     width: 100%
     height: 100%
-    background: #333
+    background: $primary-bg-color
     color: $secundary-text-color
     padding: 0.5rem 0.5rem 0 0.5rem
 
@@ -183,7 +182,7 @@ body
             
         &-section
             width: 100%
-            height: 40vh
+            height: 40%
 
             &-descricao
                 display: flex
@@ -257,7 +256,6 @@ body
 
     #img-eu
         display: flex
-        @include flex-align(center, center)
         border: 1.5rem solid #333
 
         width: 40%
@@ -270,7 +268,7 @@ body
     @include flex-align(center, center)
     gap: 1rem
 
-    background: LightSkyBlue
+    background: $primary-bg-color
     height: 100vh
     width: 100%
     padding: 3rem
@@ -283,7 +281,6 @@ body
 
     &-container
         display: flex
-        flex-wrap: wrap
         @include flex-align(center, center)
         gap: 1rem
 
@@ -298,9 +295,17 @@ body
             border: 1px solid $default-text-color
 
             &-bg
+                display: flex
+                flex-direction: column
+                @include flex-align(center, center)
+                gap: 0.5rem
                 width: 100%
                 height: 100%
                 background: #000000a4
+
+                h3
+                    font-size: 200%
+                    color: $tittle-text-color
         
     
             
@@ -308,10 +313,10 @@ body
             @include bg-img('virtuallifebrasil.jpg')
 
         #card-2
-            @include bg-img('embreve.png')
+            @include bg-img('bgabout2425.jpg')
 
         #card-3
-            @include bg-img('embreve.png')
+            @include bg-img('bgabout2425.jpg')
 
 .footer
     display: flex
@@ -321,15 +326,24 @@ body
 
     width: 100%
     height: 20%
-    background: $primary-color
+    background: $tittle-text-color
     padding: 2rem
+
+    h2
+        text-align: center
+        text-shadow: 0px 0px 3.5rem
+        color: $secundary-text-color
+        font-size: 200%
+
 
     &-info
         display: flex
+        flex-direction: column
         gap: 2rem
         @include flex-align(center, space-between)
 
-        height: 10%
+        width: 100%
+        height: 50%
         padding: 1rem 2rem
         font-size: 0.9rem
         font-weight: bold
@@ -345,3 +359,8 @@ body
             gap: 2rem
 
         
+    #copy
+        display: flex
+        
+        width: 100%
+        height: 20%
