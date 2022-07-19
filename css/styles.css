@@ -541,6 +541,22 @@ body {
   font-size: 200%;
   color: #1E90FF;
 }
+.bk3-container-item-bg a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  width: 50%;
+  height: 40%;
+  line-height: center;
+  text-align: center;
+}
+.bk3-container-item-bg a button {
+  width: 40%;
+  height: 20%;
+  border: none;
+  border-radius: 15px;
+  background-color: #1E90FF;
+}
 .bk3-container #card-1 {
   background: url("../imagem/works/virtuallifebrasil.jpg") no-repeat center;
   background-size: 200%;
