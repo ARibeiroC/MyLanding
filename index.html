@@ -6,6 +6,7 @@
   <title>Anderson Ribeiro</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://kit.fontawesome.com/7a44073813.js" crossorigin="anonymous"></script>  
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
@@ -14,17 +15,19 @@
     <header id="header">
       <nav id="header-navbar">
         <div id="header-navbar-logo">
-          <img src="imagem/eu210.jpg" alt="">
-          <h2>Anderson Ribeiro</h2>          
+          <img src="imagem/eu210.jpg" alt="">          
+        </div>
+        <div id="header-navbar-namePage">
+          <h2><a href="#main">Anderson Ribeiro</a></h2>
         </div>
         <div id="header-navbar-hamburger">
           <span>&#9776</span>
         </div>
         <ul id="header-navbar-menu">
-          <li><a href="#"><p>HOME</p></a></li>
-          <li><a href="#about"><p>SOBRE MIM</p></a></li>
-          <li><a href="#"><p>PORTIFÓLIO</p></a></li>
-          <li><a href="#contatos"><p>CONTATOS</p></a></li>
+          <li class="active"><a href="#main"><p>HOME</p></a></li>
+          <li><a href="#bk2"><p>SOBRE MIM</p></a></li>
+          <li><a href="#portifolio"><p>PORTIFÓLIO</p></a></li>
+          <li><a href="#footer"><p>CONTATOS</p></a></li>
         </ul>
       </nav>
     </header>
@@ -34,14 +37,14 @@
       </div>
       <div class="subtittle">
         <h2>
-          DESIGN E TECNOLOGIA SÃO NOSSAS ESSENCIAS.
+          DESIGN E TECNOLOGIA SÃO NOSSA ESSÊNCIA.
         </h2>
       </div>
       <div id="text">
         <P>Um profissional apaixonado em resoluções de problemas, que busca sempre soluções inovadoras para finalizar seus projetos, atualizando-se com o que há de mais tecnológico e funcional do mercado</P>
       </div>
       <div id="button">
-        <button>saiba mais</button>
+        <button><a href="#bk2">saiba mais</a></button>
       </div>
     </section>
     <section id="bk2">
@@ -99,31 +102,37 @@
         
       </div>
     </section>
-    <section class="bk3">
+    <section class="bk3" id="portifolio">
       <h2>PROJETOS</h2>
       <div class="bk3-container">
         <div class="bk3-container-item" id="card-1">
           <div class="bk3-container-item-bg">
             <h3>VIRTUAL LIFE BRASIL</h3>
-            <a href="http://blog.virtuallifebrasil.com.br/" target="_blank"><button>ACESSAR</button></a>
+            <div class="button">
+              <a href="http://blog.virtuallifebrasil.com.br/" target="_blank"><button>ACESSAR</button> </a>
+            </div>
           </div>
         </div>
         <div class="bk3-container-item" id="card-2">
           <div class="bk3-container-item-bg">
             <h3>SAUDAÇÃO</h3>
-            <a href="https://aribeiroc.github.io/saudacao/home.html" target="_blank"><button>ACESSAR</button> </a>
+            <div class="button">
+              <a href="https://aribeiroc.github.io/saudacao/home.html" target="_blank"><button>ACESSAR</button> </a>
+            </div>
           </div>
         </div>
         <div class="bk3-container-item" id="card-3">
           <div class="bk3-container-item-bg">
             <h3>IDENTIFICADOR DE IDADE</h3>
-            <a href="https://aribeiroc.github.io/Identificador-de-Idade/home" target="_blank"><button>ACESSAR</button></a>
+            <div class="button">
+              <a href="https://aribeiroc.github.io/Identificador-de-Idade/home" target="_blank"><button>ACESSAR</button> </a>
+            </div>
           </div>
         </div>
       </div>      
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <h2>CONTATOS</h2>
     <div class="footer-info">
       <div class="footer-info-contacts">
@@ -131,9 +140,13 @@
         <span>&#9743; (011) 91581-6184</span>
       </div>
       <div class="footer-info-social">
-        <div><a target="_blank" href="https://www.linkedin.com/in/anderson-ribiero-campos-01709727/"><img src="imagem/icon/linkedin15.png" alt=""></a></div>
-        <div> <a href="https://github.com/ARibeiroC?tab=repositories" target="_blank"> <img src="imagem/icon/github15.png" alt=""> </a> </div>
-        <div> <a href="#"> <img src="imagem/icon/youtube15.png" alt=""> </a> </div>
+        <div>
+          <a target="_blank" href="https://www.linkedin.com/in/anderson-ribiero-campos-01709727/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div>
+          <a href="https://github.com/ARibeiroC?tab=repositories" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+        </div>
+        <div><a href="#"></i><i class="fa-brands fa-youtube"></i></a></div>
       </div>
     </div>
     <div id="copy">

@@ -7,6 +7,7 @@
 
 html {
   height: 100vh;
+  scroll-behavior: smooth;
 }
 @media (max-width: 425px) {
   html html {
@@ -246,7 +247,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 80%;
   padding: 0;
 }
 
@@ -254,15 +255,17 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 20vh;
-  background: rgba(0, 0, 0, 0.5);
+  height: 10vh;
+  background: #000000;
+  position: fixed;
+  border-bottom: 1px solid white;
 }
 #header-navbar {
   display: flex;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80%;
+  height: 100%;
 }
 #header-navbar-logo {
   display: flex;
@@ -270,51 +273,82 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1em;
-  padding: 0.5em;
+  order: 4;
+  flex: 0.15 0 0;
+  overflow: hidden;
+  width: 100px;
+  height: 100%;
+  margin-right: 0.5rem;
 }
 #header-navbar-logo img {
-  width: 20%;
+  width: 90%;
   border-radius: 50%;
   border: 3px solid #1E90FF;
 }
-#header-navbar-logo h2 {
+#header-navbar-namePage {
+  order: 1;
+  flex: 2 0 0;
+}
+#header-navbar-namePage h2 {
   font-size: 2rem;
   font-weight: bold;
   widows: 80%;
+  padding-left: 2rem;
+}
+#header-navbar-namePage h2 a {
+  text-decoration: none;
   color: #1E90FF;
 }
 #header-navbar-hamburger {
   display: none;
+  order: 2;
+  flex: 1 0 0;
 }
 #header-navbar-menu {
   display: flex;
-  gap: 2em;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  order: 3;
+  flex: 1 0 0;
+  gap: 0.5rem;
   list-style: none;
-  margin-right: 2em;
+  height: 100%;
+  margin: 0 0.2rem;
 }
-#header-navbar-menu a {
+#header-navbar-menu li {
+  width: 100%;
+  height: 50%;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+#header-navbar-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-weight: bolder;
   font-size: 1.2em;
-  transition-duration: 0.2s;
   text-decoration: none;
+  height: 100%;
+  width: 100%;
 }
-#header-navbar-menu a:hover {
-  color: #1E90FF;
-  text-decoration: underline;
-  transition-duration: 0.2s;
+#header-navbar-menu .active, #header-navbar-menu li:hover {
+  background: #1E90FF;
+  border-radius: 5px;
 }
-
 #bk1 {
   display: flex;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: start;
-  height: 80vh;
+  margin-top: 10vh;
+  height: 90vh;
   background: rgba(0, 0, 0, 0.5);
 }
 #bk1 .tittle {
@@ -322,8 +356,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1 0 0;
   width: 100%;
-  height: 10vh;
 }
 #bk1 .tittle h1 {
   color: #1E90FF;
@@ -337,7 +371,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  flex: 0.5 0 0;
   width: 100%;
 }
 #bk1 .subtittle h2 {
@@ -351,8 +385,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 2 0 0;
   width: 100%;
-  height: 20vh;
 }
 #bk1 #text p {
   text-align: center;
@@ -366,31 +400,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1 0 0;
   width: 100%;
-  height: 40vh;
 }
 #bk1 #button button {
+  display: flex;
   width: 30%;
-  height: 10vh;
+  height: 50%;
   background: #1E90FF;
   border: none;
   border-radius: 10px;
-  color: #fff;
   font-size: 1.5em;
   font-weight: bold;
 }
+#bk1 #button button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 5 0 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+}
 #bk1 #button button:hover {
   background: #00F5FF;
-  color: #000000;
 }
 
 #bk2 {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: #333;
   color: #fff;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 10vh 0.5rem 0 0.5rem;
 }
 #bk2 #sobremim {
   display: flex;
@@ -405,6 +449,7 @@ body {
   justify-content: flex-start;
   width: 100%;
   height: 20vh;
+  flex: 1 0 0;
 }
 #bk2 #sobremim-header h2 {
   font-size: 2.5rem;
@@ -414,6 +459,7 @@ body {
 #bk2 #sobremim-section {
   width: 100%;
   height: 40%;
+  flex: 2 0 0;
 }
 #bk2 #sobremim-section-descricao {
   display: flex;
@@ -435,6 +481,7 @@ body {
   border-top: 2px solid #1E90FF;
   widows: 100%;
   height: 40vh;
+  flex: 2 0 0;
 }
 #bk2 #sobremim-footer-tittle {
   display: flex;
@@ -502,7 +549,7 @@ body {
   background: #333;
   height: 100vh;
   width: 100%;
-  padding: 3rem;
+  padding: 10vh 3rem 3rem 3rem;
 }
 .bk3 h2 {
   font-size: 200%;
@@ -538,24 +585,45 @@ body {
   background: rgba(0, 0, 0, 0.6431372549);
 }
 .bk3-container-item-bg h3 {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex: 1 0 0;
   font-size: 200%;
-  color: #1E90FF;
+  text-shadow: 0px 0px 2rem;
+  width: 100%;
+  color: #E066FF;
 }
-.bk3-container-item-bg a {
+.bk3-container-item-bg .button {
+  flex: 1 0 0;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+.bk3-container-item-bg .button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: #fff;
   font-weight: 600;
-  width: 50%;
+  width: 100%;
   height: 40%;
-  line-height: center;
-  text-align: center;
+  cursor: auto;
 }
-.bk3-container-item-bg a button {
+.bk3-container-item-bg .button button {
   width: 40%;
-  height: 20%;
+  height: 70%;
   border: none;
   border-radius: 15px;
   background-color: #1E90FF;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.bk3-container-item-bg .button button:hover {
+  background: #00F5FF;
+  color: #000000;
 }
 .bk3-container #card-1 {
   background: url("../imagem/works/virtuallifebrasil.jpg") no-repeat center;
@@ -568,6 +636,9 @@ body {
   filter: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagem/works/virtuallifebrasil.jpg");
 }
+.bk3-container #card-1:hover .button a:hover {
+  color: #fff;
+}
 .bk3-container #card-2 {
   background: url("../imagem/works/bgabout2425.jpg") no-repeat center;
   background-size: 200%;
@@ -578,6 +649,9 @@ body {
   background-size: 210%;
   filter: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagem/works/bgabout2425.jpg");
+}
+.bk3-container #card-2:hover .button a:hover {
+  color: #fff;
 }
 .bk3-container #card-3 {
   background: url("../imagem/works/bgabout2425.jpg") no-repeat center;
@@ -590,6 +664,9 @@ body {
   filter: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagem/works/bgabout2425.jpg");
 }
+.bk3-container #card-3:hover .button a:hover {
+  color: #fff;
+}
 
 .footer {
   display: flex;
@@ -600,41 +677,53 @@ body {
   gap: 1rem;
   width: 100%;
   height: 20%;
-  background: #1E90FF;
+  background: #000000;
   padding: 2rem;
+  color: #fff;
 }
 .footer h2 {
   text-align: center;
-  text-shadow: 0px 0px 3.5rem;
-  color: #fff;
+  color: #1E90FF;
   font-size: 200%;
 }
 .footer-info {
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
   gap: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   height: 50%;
   padding: 1rem 2rem;
   font-size: 0.9rem;
   font-weight: bold;
-  color: #000000;
-  text-shadow: 2px 2px 5px #00F5FF;
+  color: #fff;
 }
 .footer-info-contacts {
   display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: end;
   gap: 2rem;
+  padding: 0.5rem;
 }
 .footer-info-social {
   display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   gap: 2rem;
+  padding: 0.5rem;
+}
+.footer-info-social a {
+  font-size: 1.5rem;
+  color: white;
 }
 .footer #copy {
   display: flex;
-  width: 100%;
+  display: flex;
+  align-items: cente;
+  justify-content: center;
   height: 20%;
 }
 

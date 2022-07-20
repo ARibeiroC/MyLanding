@@ -9,6 +9,7 @@
 html
     height: 100vh
     @include device-g()
+    scroll-behavior: smooth
 
 body
     display: flex
@@ -21,80 +22,112 @@ body
     display: flex
     flex-direction: column
     width: 100%
-    height: 100%
+    height: 80%
     padding: 0
 
 #header
     display: flex
     flex-direction: column
 
-
     width: 100%
-    height: 20vh
-    background: rgba(0,0 ,0 , 0.5 )
-
+    height: 10vh
+    background: #000000
+    position: fixed
+    border-bottom: 1px solid white
     &-navbar
         display: flex
         @include flex-align(center, space-between)
         
-        height: 80%
+        height: 100%
 
         &-logo
             display: flex
             @include flex-align(center, center)
             gap: 1em
+            order: 4
+            flex: 0.15 0 0
 
-            padding: 0.5em
+            overflow: hidden
+            width: 100px
+            height: 100%
+            margin-right: 0.5rem
 
             img
-                width: 20%
+                width: 90%
                 border-radius: 50%
-                border: 3px solid $tittle-text-color
+                border: 3px solid $tittle-text-color            
 
+        &-namePage
+            order: 1
+            flex: 2 0 0
             h2
                 font-size: 2rem
                 font-weight: bold
                 widows: 80%
-                color: $tittle-text-color
+                padding-left: 2rem
+
+                a
+                    text-decoration: none
+                    color: $tittle-text-color
+
 
         &-hamburger
             display: none
+            order: 2
+            flex: 1 0 0 
 
         &-menu
             display: flex
-            gap: 2em
             @include flex-align(center, flex-end)
+            order: 3
+            flex: 1 0 0
+            gap: 0.5rem
+
+
             list-style: none
+            height: 100%
+            margin: 0 0.2rem
+
+            li
+                width: 100%
+                height: 50%
+                padding: 0.2rem
+                @include flex-align(center, center)
+                transition: all 0.3s ease
+                border-radius: 5px
+
+                a   
+                    @include flex-align(center, center)
+                    color: $secundary-text-color
+                    font-weight: bolder
+                    font-size: 1.2em
+                    text-decoration: none
+                    height: 100%
+                    width: 100%
 
             
-            margin-right: 2em
+            .active, li:hover
+                background: $tittle-text-color 
+                border-radius: 5px
 
-            a
-                color: $secundary-text-color
-                font-weight: bolder
-                font-size: 1.2em
-                transition-duration: 0.2s
-                text-decoration: none
-
-            a:hover
-                color: $tittle-text-color
-                text-decoration: underline
-                transition-duration: 0.2s
-
+        
+        &-menu:hover
+            
 #bk1
     display: flex
     flex-direction: column
     @include flex-align(center, start)
 
-    height: calc(100vh - 20vh)
+    margin-top: 10vh
+    height: calc(100vh - 10vh)
     background: rgba(0,0 ,0 , 0.5 )
 
     .tittle
         display: flex
         @include flex-align(center, center)
+        flex: 1 0 0
         
         width: 100%
-        height: 10vh
 
 
         h1
@@ -107,8 +140,8 @@ body
     .subtittle
         display: flex
         @include flex-align(center, center)
+        flex: 0.5 0 0
 
-        height: 30vh
         width: 100%
 
         h2
@@ -120,9 +153,9 @@ body
     #text
         display: flex
         @include flex-align(center, center)
+        flex: 2 0 0
 
         width: 100%
-        height: 20vh
 
         p
             text-align: center
@@ -134,32 +167,42 @@ body
     #button
         display: flex
         @include flex-align(center, center)
+        flex: 1 0 0
 
         width: 100%
-        height: 40vh
 
         button
+            display: flex
             width: 30%
-            height: 10vh
+            height: 50%
             background: $tittle-text-color
             border: none
             border-radius: 10px
-            color: $secundary-text-color
             font-size: 1.5em
             font-weight: bold
 
+            a   
+                @include flex-align(center, center)
+                flex: 5 0 0
+                width: 100%
+                height: 100%
+                color: $secundary-text-color
+                text-decoration: none
+                border-radius: 10px
+
         button:hover
             background: $primary-color
-            color: $default-text-color
+
+
 
 #bk2
     display: flex
 
     width: 100%
-    height: 100%
+    height: 100vh
     background: $primary-bg-color
     color: $secundary-text-color
-    padding: 0.5rem 0.5rem 0 0.5rem
+    padding: 10vh 0.5rem 0 0.5rem
 
     #sobremim
         display: flex
@@ -174,6 +217,7 @@ body
 
             width: 100%
             height: 20vh
+            flex: 1 0 0
 
             h2
                 font-size: 2.5rem
@@ -183,6 +227,7 @@ body
         &-section
             width: 100%
             height: 40%
+            flex: 2 0 0
 
             &-descricao
                 display: flex
@@ -206,6 +251,7 @@ body
 
             widows: 100%
             height: 40vh
+            flex: 2 0 0
 
             &-tittle
                 display: flex
@@ -271,7 +317,7 @@ body
     background: $primary-bg-color
     height: 100vh
     width: 100%
-    padding: 3rem
+    padding: 10vh 3rem 3rem 3rem
 
     h2
         font-size: 200%
@@ -303,25 +349,45 @@ body
                 height: 100%
                 background: #000000a4
 
-                h3
-                    font-size: 200%
-                    color: $tittle-text-color
+                h3  
+                    @include flex-align(end, center)
+                    flex: 1 0 0
 
-                a
-                    text-decoration: none
-                    color: $secundary-text-color
-                    font-weight: 600
-                    width: 50%
-                    height: 40%
-                    line-height: center
-                    text-align: center
+                    font-size: 200%
+                    text-shadow: 0px 0px 2rem
+                    width: 100%
+                    color: $secundary-color
+
+                .button
+                    flex: 1 0 0
+                    @include flex-align(start, center)
+                    
+                    width: 100%
+                    
+                    a
+                        @include flex-align(center, center)
+
+                        text-decoration: none
+                        font-weight: 600
+                        width: 100%
+                        height: 40%
+                        cursor: auto
 
                     button
                         width: 40%
-                        height: 20%
+                        height: 70%
                         border: none
                         border-radius: 15px
                         background-color: $tittle-text-color
+                        color: $secundary-text-color
+                        font-weight: 700
+                        cursor: pointer
+
+                    button:hover
+                        background: $primary-color
+                        color: $default-text-color
+                        
+                        
         
     
             
@@ -342,41 +408,49 @@ body
 
     width: 100%
     height: 20%
-    background: $tittle-text-color
+    background: $default-text-color
     padding: 2rem
+    color: $secundary-text-color
 
     h2
         text-align: center
-        text-shadow: 0px 0px 3.5rem
-        color: $secundary-text-color
+        color: $tittle-text-color
         font-size: 200%
 
 
     &-info
         display: flex
-        flex-direction: column
+        flex-flow: wrap
         gap: 2rem
         @include flex-align(center, space-between)
 
-        width: 100%
         height: 50%
         padding: 1rem 2rem
         font-size: 0.9rem
         font-weight: bold
-        color: $default-text-color
-        text-shadow: 2px 2px 5px $primary-color
+        color: $secundary-text-color
 
         &-contacts
             display: flex
+            @include flex-align(center, end)
             gap: 2rem
+
+            padding: 0.5rem
 
         &-social
             display: flex
+            @include flex-align(center, start)
             gap: 2rem
+
+            padding: 0.5rem
+
+            a   
+                font-size: 1.5rem
+                color: white
 
         
     #copy
         display: flex
+        @include flex-align(cente, center)
         
-        width: 100%
         height: 20%
