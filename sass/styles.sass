@@ -7,9 +7,10 @@
 
 html
     height: 100vh
+    scroll-behavior: smooth
+    transition: 1s
 
 body
-    display: flex
     @include flex-align(center, flex-start)
     flex-direction: column
     height: 100vh
@@ -22,32 +23,49 @@ body
     flex-direction: column
     @include flex-align(center, center)
 
+    background: rgba(0, 0, 0, 0.8 )
+    -backdrop-filter: blur(5px)
+
 #header
     display: flex
     flex-direction: column
 
-
-    width: 100%
-    height: 20vh
-    background: rgba(0,0 ,0 , 0.5 )
+    width: 80%
+    height: 10vh
+    background: #000
+    position: fixed
+    top: 0
+    z-index: 1
     
     &-navbar
-        display: flex
         @include flex-align(center, space-between)
         
-        height: 80%
+        height: 100%        
 
         &-logo
             display: flex
-            @include flex-align(center, center)
             gap: 1em
 
             padding: 0.5em
+            height: 100%
+            
 
-            img
-                width: 20%
+            &-imgLogo
+                flex: 1 0 0
+                overflow: hidden
+
+                height: 100%
                 border-radius: 50%
                 border: 3px solid $primary-color
+
+            &-textLogo
+                flex: 6 0 0
+                @include flex-align(center, start)
+                //width: 85%
+                height: 100%
+
+            img
+                max-width: 100%
 
             h2
                 font-size: 2rem
@@ -71,11 +89,12 @@ body
                 font-weight: bolder
                 font-size: 1.2em
                 transition-duration: 0.2s
+                
 
             a:hover
                 color: $primary-color
-                text-decoration: underline
                 transition-duration: 0.2s
+                border-bottom: 1px solid $primary-color
 
 #bk1
     display: flex
@@ -83,16 +102,16 @@ body
     @include flex-align(center, start)
     //justify-content: 
 
-    height: 80vh
-    background: rgba(0,0 ,0 , 0.5 )
+    height: 100vh
+    border-bottom: 1px solid white
 
     .tittle
         display: flex
         @include flex-align(center, center)
         
         width: 100%
-        height: 10vh
-
+        height: 50vh   
+        margin-top: 10vh  
 
         h1
             color: $primary-color
@@ -151,11 +170,12 @@ body
 #bk2
     display: flex
 
-    width: 100%
+    width: 80%
     height: 100vh
-    background: #333
-    color: $secundary-text-color
+    color: #fff
     padding: 0.5rem 0.5rem 0.5rem 1rem
+    border-bottom: 1px solid white
+    background: #333
 
     #sobremim
         display: flex
@@ -163,6 +183,7 @@ body
 
         width: 100%
         height: 100%
+        margin-top: 10vh
 
         &-header
             display: flex
@@ -195,30 +216,26 @@ body
 
     
         &-footer
-            display: flex
+            @include flex-align(center, center)
             flex-direction: column
-            @include flex-align(flex-start, center)
             border-top: 2px solid $tittle-text-color
 
             widows: 100%
             height: 40vh
 
             &-tittle
-                display: flex
                 @include flex-align(center, left)
                 width: 100%
-                height: 25%
-                
+                height: 25%                
 
                 h2
                     font-size: 1.5rem
                     color: $tittle-text-color
-                    text-shadow: 3px 3px 0.2rem #000000c7
+                    text-shadow: 2px 1px 0.2rem #000000c7
 
 
             &-conhecimentos
-                display: flex
-                @include flex-align(center, center)
+                @include flex-align(flex-start, center)
 
                 height: 75%
                 width: 100%
@@ -250,33 +267,37 @@ body
                         font-weight: 600
                         color: $secundary-text-color
 
+    
     #img-eu
         display: flex
         @include flex-align(center, center)
         border: 1.5rem solid #333
 
-        width: 40%
-        background: url("/imagem/bgabout3500.jpg") center center no-repeat
+        width: 60%
+        background: url("/imagem/bgabout3500.jpg") no-repeat
         background-size: cover
+        margin-top: 10vh
 
-.bk3
+#bk3
     display: flex
     flex-direction: column
     @include flex-align(center, center)
     gap: 1rem
 
-    background: LightSkyBlue
     height: 100vh
-    width: 100%
+    width: 80%
     padding: 3rem
+    border-bottom: 1px solid white
+    background: #222
 
     h2
         font-size: 200%
         padding: 2rem 0rem 2rem 1rem
         color: $tittle-text-color
         height: 10vh
+        margin-top: 10vh
 
-    &-container
+    .container
         display: flex
         flex-wrap: wrap
         @include flex-align(center, center)
@@ -299,13 +320,13 @@ body
         
     
             
-        #card-1
+        .card-1
             @include bg-img('virtuallifebrasil.jpg')
 
-        #card-2
+        .card-2
             @include bg-img('embreve.png')
 
-        #card-3
+        .card-3
             @include bg-img('embreve.png')
 
 .footer
@@ -314,7 +335,7 @@ body
     @include flex-align(center, center)
     gap: 1rem    
 
-    width: 100%
+    width: 80%
     height: 20%
     background: $primary-color
     padding: 2rem

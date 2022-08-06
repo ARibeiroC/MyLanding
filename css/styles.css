@@ -10,10 +10,11 @@
 
 html {
   height: 100vh;
+  scroll-behavior: smooth;
+  transition: 1s;
 }
 
 body {
-  display: flex;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -30,34 +31,48 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  -backdrop-filter: blur(5px);
 }
 
 #header {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 20vh;
-  background: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 10vh;
+  background: #000;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 #header-navbar {
   display: flex;
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80%;
+  height: 100%;
 }
 #header-navbar-logo {
   display: flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1em;
   padding: 0.5em;
+  height: 100%;
 }
-#header-navbar-logo img {
-  width: 20%;
+#header-navbar-logo-imgLogo {
+  flex: 1 0 0;
+  overflow: hidden;
+  height: 100%;
   border-radius: 50%;
   border: 3px solid #00F5FF;
+}
+#header-navbar-logo-textLogo {
+  flex: 6 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+}
+#header-navbar-logo img {
+  max-width: 100%;
 }
 #header-navbar-logo h2 {
   font-size: 2rem;
@@ -84,8 +99,8 @@ body {
 }
 #header-navbar-menu a:hover {
   color: #00F5FF;
-  text-decoration: underline;
   transition-duration: 0.2s;
+  border-bottom: 1px solid #00F5FF;
 }
 
 #bk1 {
@@ -94,8 +109,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-  height: 80vh;
-  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  border-bottom: 1px solid white;
 }
 #bk1 .tittle {
   display: flex;
@@ -103,7 +118,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 10vh;
+  height: 50vh;
+  margin-top: 10vh;
 }
 #bk1 .tittle h1 {
   color: #00F5FF;
@@ -165,17 +181,19 @@ body {
 
 #bk2 {
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 100vh;
-  background: #333;
-  color: #bebebe;
+  color: #fff;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-bottom: 1px solid white;
+  background: #333;
 }
 #bk2 #sobremim {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  margin-top: 10vh;
 }
 #bk2 #sobremim-header {
   display: flex;
@@ -207,16 +225,14 @@ body {
 }
 #bk2 #sobremim-footer {
   display: flex;
-  flex-direction: column;
-  display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
   border-top: 2px solid #1E90FF;
   widows: 100%;
   height: 40vh;
 }
 #bk2 #sobremim-footer-tittle {
-  display: flex;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -226,12 +242,11 @@ body {
 #bk2 #sobremim-footer-tittle h2 {
   font-size: 1.5rem;
   color: #1E90FF;
-  text-shadow: 3px 3px 0.2rem rgba(0, 0, 0, 0.7803921569);
+  text-shadow: 2px 1px 0.2rem rgba(0, 0, 0, 0.7803921569);
 }
 #bk2 #sobremim-footer-conhecimentos {
   display: flex;
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 75%;
   width: 100%;
@@ -269,30 +284,33 @@ body {
   align-items: center;
   justify-content: center;
   border: 1.5rem solid #333;
-  width: 40%;
-  background: url("/imagem/bgabout3500.jpg") center center no-repeat;
+  width: 60%;
+  background: url("/imagem/bgabout3500.jpg") no-repeat;
   background-size: cover;
+  margin-top: 10vh;
 }
 
-.bk3 {
+#bk3 {
   display: flex;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: LightSkyBlue;
   height: 100vh;
-  width: 100%;
+  width: 80%;
   padding: 3rem;
+  border-bottom: 1px solid white;
+  background: #222;
 }
-.bk3 h2 {
+#bk3 h2 {
   font-size: 200%;
   padding: 2rem 0rem 2rem 1rem;
   color: #1E90FF;
   height: 10vh;
+  margin-top: 10vh;
 }
-.bk3-container {
+#bk3 .container {
   display: flex;
   flex-wrap: wrap;
   display: flex;
@@ -302,47 +320,47 @@ body {
   height: 90vh;
   width: 100%;
 }
-.bk3-container-item {
+#bk3 .container-item {
   display: flex;
   flex-direction: column;
   width: 30%;
   height: 50%;
   border: 1px solid #000;
 }
-.bk3-container-item-bg {
+#bk3 .container-item-bg {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6431372549);
 }
-.bk3-container #card-1 {
+#bk3 .container .card-1 {
   background: url("../imagem/works/virtuallifebrasil.jpg") no-repeat center;
   background-size: 200%;
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.bk3-container #card-1:hover {
+#bk3 .container .card-1:hover {
   background-size: 210%;
   filter: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagem/works/virtuallifebrasil.jpg");
 }
-.bk3-container #card-2 {
+#bk3 .container .card-2 {
   background: url("../imagem/works/embreve.png") no-repeat center;
   background-size: 200%;
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.bk3-container #card-2:hover {
+#bk3 .container .card-2:hover {
   background-size: 210%;
   filter: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagem/works/embreve.png");
 }
-.bk3-container #card-3 {
+#bk3 .container .card-3 {
   background: url("../imagem/works/embreve.png") no-repeat center;
   background-size: 200%;
   filter: grayscale(100%);
   transition: 0.6s;
 }
-.bk3-container #card-3:hover {
+#bk3 .container .card-3:hover {
   background-size: 210%;
   filter: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagem/works/embreve.png");
@@ -355,7 +373,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 100%;
+  width: 80%;
   height: 20%;
   background: #00F5FF;
   padding: 2rem;
