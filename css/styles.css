@@ -13,6 +13,9 @@ html {
   html html {
     max-width: 425px;
   }
+  html body {
+    overflow: hidden;
+  }
   html #header {
     height: 10vh;
     background: #1E90FF;
