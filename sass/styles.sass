@@ -309,7 +309,6 @@ body
         background-size: cover
 
 .bk3
-    display: flex
     flex-direction: column
     @include flex-align(center, center)
     gap: 1rem
@@ -326,7 +325,6 @@ body
         height: 10vh
 
     &-container
-        display: flex
         @include flex-align(center, center)
         gap: 1rem
 
@@ -338,10 +336,8 @@ body
             flex-direction: column
             width: 30%
             height: 50%
-            border: 1px solid $default-text-color
-
+            
             &-bg
-                display: flex
                 flex-direction: column
                 @include flex-align(center, center)
                 gap: 0.5rem
@@ -351,7 +347,6 @@ body
 
                 h3  
                     @include flex-align(end, center)
-                    flex: 1 0 0
 
                     font-size: 200%
                     text-shadow: 0px 0px 2rem
@@ -359,7 +354,6 @@ body
                     color: $secundary-color
 
                 .button
-                    flex: 1 0 0
                     @include flex-align(start, center)
                     
                     width: 100%
@@ -393,6 +387,7 @@ body
             
         #card-1
             @include bg-img('virtuallifebrasil.jpg')
+            
 
         #card-2
             @include bg-img('bgabout2425.jpg')
@@ -401,7 +396,6 @@ body
             @include bg-img('bgabout2425.jpg')
 
 .footer
-    display: flex
     flex-direction: column
     @include flex-align(center, center)
     gap: 1rem    
@@ -419,7 +413,6 @@ body
 
 
     &-info
-        display: flex
         flex-flow: wrap
         gap: 2rem
         @include flex-align(center, space-between)
@@ -431,14 +424,12 @@ body
         color: $secundary-text-color
 
         &-contacts
-            display: flex
             @include flex-align(center, end)
             gap: 2rem
 
             padding: 0.5rem
 
         &-social
-            display: flex
             @include flex-align(center, start)
             gap: 2rem
 
@@ -450,7 +441,6 @@ body
 
         
     #copy
-        display: flex
         @include flex-align(cente, center)
         
         height: 20%
