@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anderson Ribeiro</title>
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- GOOGOEL FONTS -->
+  <link rel="stylesheet" href="src/css/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -12,48 +17,47 @@
 <body>
   <main id="main-content">
     <header id="header">
-      <nav id="header-navbar">
-        <div id="header-navbar-logo">
-          <div id="header-navbar-logo-imgLogo"><img src="imagem/eu210.jpg" alt=""></div>
-          <div id="header-navbar-logo-textLogo"><h2>Anderson Ribeiro</h2></div>        
-        </div>
-        <div id="header-navbar-hamburger">
+      <div id="text-logo">
+        <h2>Anderson Ribeiro</h2>
+      </div>
+      <nav id="navbar">
+        <div id="hamburger">
           <input type="checkbox" id="header-navbar-hamburger-menu-toggle">
           <label id="button-menu" for="header-navbar-hamburger-menu-toggle">&#9776</label>
         </div>
-        <ul id="header-navbar-menu">
-          <li><a href="#bk1">HOME</a></li>
-          <li><a href="#bk2">SOBRE MIM</a></li>
-          <li><a href="#bk3">PORTFÓLIO</a></li>
+        <ul id="menu">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">SOBRE MIM</a></li>
+          <li><a href="#portfolio">PORTFÓLIO</a></li>
           <li><a href="#feedback">FEEDBACKS</a></li>
           <li><a href="#contatos">CONTATOS</a></li>
         </ul>
       </nav>
     </header>
-    <section id="bk1">
+    <section id="home">
       <div class="tittle"> 
-        <h1>Web Design / Front-End</h1>
+        <h1>Desenvolvedor Front-End</h1>
       </div>
       <div class="subtittle">
-        <h2>
-          DESIGN E TECNOLOGIA SÃO NOSSAS ESSENCIAS.
-        </h2>
+        <h2>"O resultado do programa é relativo o nível de conhecimento do programador."</h2>
+        <p><a href="https://www.pensador.com/autor/rangelthr/" target="_blank">Rangel THR</a></p>
       </div>
-      <div id="text">
-        <P>Um profissional apaixonado em resoluções de problemas, que busca sempre soluções inovadoras para finalizar seus projetos, atualizando-se com o que há de mais tecnológico e funcional do mercado</P>
-      </div>
-      <div id="button">
-        <button>saiba mais</button>
+      <div id="continue">
+        <div class="button-continue">
+          <a href="#about">
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
+        </div>
       </div>
     </section>
-    <section id="bk2">
-      <div id="sobremim">
-        <div id="sobremim-header">
+    <section id="about">
+      <div id="about-description">
+        <div id="title-about">
           <h2>Sobre Mim!</h2>
         </div>
         <div id="sobremim-section">
           <div id="sobremim-section-descricao">
-            <p>Instrutor de T.I de cursos profissionalizantes a mais de 10 anos, ministrando aulas de: Pacote Office, Web Design, Web Developer, Computação Gráfica, Linguagem de programa, PHP, Html/Css, Montagem e Manutenção, Modelagem 3D, Animação de Objetos 3D, entre outros.</p>
+            <p>Estudo programação desde 2003, comecei na época dos sites em <span>Flash</span>, onde a linguagem era ActionScript, porém meu foco não era desenvolver sites e sim jogos.</p>
             <p>Atualmentou buscando entrar de forma profissional para o mercado de Web Developer, focando inicialmente no Front-End</p>
           </div>
         </div>
@@ -63,42 +67,10 @@
               Conhecimentos Relevantes
             </h2>
           </div>
-          <div id="sobremim-footer-conhecimentos">
-            <div class="sobremim-footer-content">
-              <div class="sobremim-footer-content-img">
-                <img src="imagem/icon/html150.png" alt="Logo HTML 5">
-              </div>
-              <div class="sobremim-footer-content-info"><P>HTML 5</P></div>
-            </div>
-            <div class="sobremim-footer-content">
-              <div class="sobremim-footer-content-img">
-                <img src="imagem/icon/css150.png" alt="Logo CSS 3">
-              </div>
-              <div class="sobremim-footer-content-info"><P>CSS 3</P></div>
-            </div>
-            <div class="sobremim-footer-content">
-              <div class="sobremim-footer-content-img">
-                <img src="imagem/icon/sass150.png" alt="Logo HTML 5">
-              </div>
-              <div class="sobremim-footer-content-info"><p>CSS/SASS</p></div>
-            </div>
-            <div class="sobremim-footer-content">
-              <div class="sobremim-footer-content-img">
-                <img src="imagem/icon/javascript150.png" alt="Logo HTML 5">
-              </div>
-              <div class="sobremim-footer-content-info"><p>ECMASCRIPT 6</p></div>
-            </div>
-            <div class="sobremim-footer-content">
-              <div class="sobremim-footer-content-img">
-                <img src="imagem/icon/python150.png" alt="Logo HTML 5">
-              </div>
-              <div class="sobremim-footer-content-info"><p>PYTHON</p></div>
-            </div>
-          </div>
         </div>
       </div>
       <div id="img-eu">
-        
+        <h2>Imagem</h2>
       </div>
     </section>
     <section id="bk3">
@@ -142,6 +114,5 @@
       </div>
     </footer>
   </main>
-  
 </body>
 </html>

@@ -1,0 +1,19 @@
+@mixin about
+
+#about
+    @include flex-align(start, start)
+
+    min-height: 100vh
+    padding-block: $height-header
+
+    #about-description
+        @include flex-align(start, center)
+        flex-direction: column
+        gap: 1rem
+
+        #title-about
+            margin-block: $height-header
+
+            h2
+                font-size: 2.5rem
+                color: $secundary-color

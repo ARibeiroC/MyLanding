@@ -1,0 +1,82 @@
+@import 'header'
+@mixin home
+    #home
+        @include flex-align(center, start)
+        flex-direction: column
+        gap: 5rem
+
+        min-height: 100vh
+
+        .tittle
+            display: flex
+            @include flex-align(center, center)
+            
+            width: 100%
+            margin-top: calc($height-header * 2)
+            flex: 1
+
+            h1
+                color: $primary-color
+                font-size: 3.5rem
+                text-shadow: 0px 0px 3.5rem
+                width: 100%
+                text-align: center
+        
+        .subtittle
+            @include flex-align(start,'')
+            flex-direction: column
+            flex: 1
+            gap: 5rem
+
+            width: 100%
+
+            h2  
+                @include flex-align(flex-start, start)
+                text-align: center
+                text-shadow: 0px 0px 3.5rem
+                color: $secundary-color
+                font-size: 2rem
+            
+            p   
+                @include flex-align(center, end)
+                width: 100%
+                height: 2rem
+                text-align: right
+
+                a
+                    color: $secundary-color
+                    text-decoration: underline
+
+        #continue
+            @include flex-align(center, center)
+
+            flax: 4
+            width: 100%
+            height: $height-header*1.5
+
+            .button-continue
+                @include flex-align(center, center)
+                border-radius: 50%
+                width: 50px
+                height: 50px
+                border: 1px solid $default-text-color
+                cursor: pointer
+                transform: translateY(-6px)
+                transition: .4s
+                animation: button-continue .8s infinite alternate linear
+
+                a
+                    color: $default-text-color
+                    i
+                        font-size: 1.5rem
+
+
+@keyframes button-continue
+    from 
+        transform: translateY(0px)
+
+    to
+        transform: translateY(-6px)
+
+        // #continue:hover > .button-continue
+        //         transform: translateY(0px)

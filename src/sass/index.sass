@@ -1,0 +1,231 @@
+@import 'mixins'
+@import 'variables'
+@import 'header'
+@import 'home'
+@import 'about'
+
+// RESET CONFIGURATION PAGE
+*
+    @include reset
+
+html
+    scroll-behavior: smooth
+    transition: 1s
+
+body
+    @include flex-align(center, flex-start)
+    flex-direction: column
+    min-height: 90vh
+    height: 100vh
+    color: $default-text-color
+    background: url('../img/public/headerbg1300.jpg') no-repeat center center fixed
+    background-blend-mode: darken
+    background-color: rgba(0, 0, 0, 0.8)
+    background-size: cover
+
+#main-content
+    @include flex-align(center, center)
+    flex-direction: column
+    
+    width: 1200px
+
+@include header
+@include home
+@include about
+
+// #about
+//     display: flex
+
+//     min-height: 100vh
+//     padding-block: $height-header
+
+//     #title-about
+//         margin-block: $height-header
+
+//         h2
+//             font-size: 2.5rem
+//             color: magenta
+    // #sobremim
+    //     display: flex
+    //     flex-direction: column
+
+    //     width: 100%
+    //     height: 100%
+    //     // margin-top: 10vh
+
+    //     #title-about
+    //         display: flex
+    //         @include flex-align(center, flex-start)
+
+    //         width: 100%
+    //         height: 20vh
+
+    //         h2
+    //             font-size: 2.5rem
+    //             color: $title-text-color
+    //             text-shadow: 3px 3px 0.2rem #000000c7
+            
+    //     &-section
+    //         width: 100%
+    //         height: 40vh
+
+    //         &-descricao
+    //             display: flex
+    //             flex-direction: column
+
+    //             width: 100%
+    //             text-align: justify
+
+    //             p
+    //                 font-size: 1.5rem
+    //                 font-weight: 600
+    //                 width: 90%
+
+
+    
+    //     &-footer
+    //         @include flex-align(center, center)
+    //         flex-direction: column
+    //         border-top: 2px solid $title-text-color
+
+    //         widows: 100%
+    //         height: 40vh
+
+    //         &-tittle
+    //             @include flex-align(center, left)
+    //             width: 100%
+    //             height: 25%                
+
+    //             h2
+    //                 font-size: 1.5rem
+    //                 color: $title-text-color
+    //                 text-shadow: 2px 1px 0.2rem #000000c7
+
+
+    //         &-conhecimentos
+    //             @include flex-align(flex-start, center)
+
+    //             height: 75%
+    //             width: 100%
+
+    //             .sobremim-footer-content
+    //                 display: flex
+    //                 flex-direction: column
+    //                 @include flex-align(center, space-between)
+
+    //                 width: 20%
+    //                 height: 80%
+
+    //                 .sobremim-footer-content-img
+    //                     display: flex
+    //                     @include flex-align(center, center)
+
+    //                     width: 100%
+    //                     height: 90%
+
+    //                     img
+    //                         width: 60%
+
+
+    //                 .sobremim-footer-content-info
+
+    //                     height: 10%
+    //                     text-align: center
+    //                     font-size: 1.1rem
+    //                     font-weight: 600
+    //                     color: $secundary-text-color
+
+    
+    // #img-eu
+    //     display: flex
+    //     @include flex-align(center, center)
+    //     border: 1.5rem solid #333
+
+    //     width: 60%
+    //     background: url("/imagem/bgabout3500.jpg") no-repeat
+    //     background-size: cover
+    //     margin-top: 10vh
+
+// #bk3
+//     display: flex
+//     flex-direction: column
+//     @include flex-align(center, center)
+//     gap: 1rem
+
+//     height: 100vh
+//     width: 80%
+//     padding: 3rem
+//     border-bottom: 1px solid white
+//     background: #222
+
+//     h2
+//         font-size: 200%
+//         padding: 2rem 0rem 2rem 1rem
+//         color: $title-text-color
+//         height: 10vh
+//         margin-top: 10vh
+
+//     .container
+//         display: flex
+//         flex-wrap: wrap
+//         @include flex-align(center, center)
+//         gap: 1rem
+
+//         height: 90vh
+//         width: 100%
+
+//         &-item
+//             display: flex
+//             flex-direction: column
+//             width: 30%
+//             height: 50%
+//             border: 1px solid $default-text-color
+
+//             &-bg
+//                 width: 100%
+//                 height: 100%
+//                 background: #000000a4
+        
+    
+            
+//         .card-1
+//             @include bg-img('virtuallifebrasil.jpg')
+
+//         .card-2
+//             @include bg-img('embreve.png')
+
+//         .card-3
+//             @include bg-img('embreve.png')
+
+// .footer
+//     display: flex
+//     flex-direction: column
+//     @include flex-align(center, center)
+//     gap: 1rem    
+
+//     width: 80%
+//     height: 20%
+//     background: $primary-color
+//     padding: 2rem
+
+//     &-info
+//         display: flex
+//         gap: 2rem
+//         @include flex-align(center, space-between)
+
+//         height: 10%
+//         padding: 1rem 2rem
+//         font-size: 0.9rem
+//         font-weight: bold
+//         color: $default-text-color
+//         text-shadow: 2px 2px 5px $primary-color
+
+//         &-contacts
+//             display: flex
+//             gap: 2rem
+
+//         &-social
+//             display: flex
+//             gap: 2rem
+
+        

@@ -1,0 +1,63 @@
+@mixin header
+#header
+    @include flex-align(end, space-between)
+
+    width: 1200px
+    background: rgba(0, 0, 0, 0.8)
+    position: fixed
+    top: 0
+    z-index: 1
+    height: $height-header
+        
+    #text-logo
+        @include flex-align(center, start)
+        color: $secundary-color
+        width: 40%
+        height: 100%
+
+        h2
+            font-size: 2rem
+            font-style: italic
+
+        #textLogo
+            @include flex-align(center, start)
+            //width: 85%
+            height: 100%
+            h2
+                font-size: 2rem
+                font-weight: bold
+                widows: 80%
+                color: $primary-color
+
+    #navbar
+        @include flex-align(flex-start, flex-end)
+        height: 100%
+
+        
+        width: 80%
+
+        #hamburger
+            display: none
+
+        #menu
+            @include flex-align(auto, center)
+            
+            height: 100%
+
+            li  
+                @include flex-align(center, center)
+                min-width: 150px
+                text-align: center
+
+                a
+                    color: $secundary-text-color
+                    font-weight: bolder
+                    font-size: 1.2em
+                    border: 0px solid transparent
+                    transition: .4s
+                    
+
+                a:hover
+                    transform: translateY(-4px)
+                    color: $secundary-color
+                    border-bottom: 1px solid
