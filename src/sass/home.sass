@@ -6,8 +6,9 @@
         gap: 5rem
 
         min-height: 100vh
+        border-bottom: 1px dashed $secundary-text-color
 
-        .tittle
+        .home-tittle
             display: flex
             @include flex-align(center, center)
             
@@ -15,14 +16,13 @@
             margin-top: calc($height-header * 2)
             flex: 1
 
-            h1
-                color: $primary-color
-                font-size: 3.5rem
+            h1  
+                @include super-title
                 text-shadow: 0px 0px 3.5rem
                 width: 100%
                 text-align: center
         
-        .subtittle
+        .home-subtitle
             @include flex-align(start,'')
             flex-direction: column
             flex: 1
@@ -30,12 +30,10 @@
 
             width: 100%
 
-            h2  
+            h2 
                 @include flex-align(flex-start, start)
+                @include title
                 text-align: center
-                text-shadow: 0px 0px 3.5rem
-                color: $secundary-color
-                font-size: 2rem
             
             p   
                 @include flex-align(center, end)
@@ -49,10 +47,14 @@
 
         #continue
             @include flex-align(center, center)
+            flex-direction: column
 
             flax: 4
             width: 100%
-            height: $height-header*1.5
+            height: $height-header*4
+            
+            span
+                margin-block: 2rem
 
             .button-continue
                 @include flex-align(center, center)
@@ -63,10 +65,13 @@
                 cursor: pointer
                 transform: translateY(-6px)
                 transition: .4s
-                animation: button-continue .8s infinite alternate linear
+                animation: button-continue .5s infinite alternate linear
 
-                a
+                a   
+                    @include flex-align(center, center)
                     color: $default-text-color
+                    height: 100%
+                    width: 100%
                     i
                         font-size: 1.5rem
 
@@ -76,7 +81,7 @@
         transform: translateY(0px)
 
     to
-        transform: translateY(-6px)
+        transform: translateY(-20px)
 
         // #continue:hover > .button-continue
         //         transform: translateY(0px)

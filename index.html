@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anderson Ribeiro</title>
 
+  <!-- SCRIPTS -->
+    <script src="./src/js/main.js" defer type="module"></script>
+
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -35,14 +38,15 @@
       </nav>
     </header>
     <section id="home">
-      <div class="tittle"> 
-        <h1>Desenvolvedor Front-End</h1>
+      <div class="home-tittle"> 
+        <h1 class="title">Desenvolvedor Front-End</h1>
       </div>
-      <div class="subtittle">
-        <h2>"O resultado do programa é relativo o nível de conhecimento do programador."</h2>
+      <div class="home-subtitle">
+        <h2 class="subtitle">"O resultado do programa é relativo o nível de conhecimento do programador."</h2>
         <p><a href="https://www.pensador.com/autor/rangelthr/" target="_blank">Rangel THR</a></p>
       </div>
       <div id="continue">
+        <span>Saiba mais...</span>
         <div class="button-continue">
           <a href="#about">
             <i class="fa-solid fa-caret-down"></i>
@@ -52,46 +56,100 @@
     </section>
     <section id="about">
       <div id="about-description">
-        <div id="title-about">
-          <h2>Sobre Mim!</h2>
-        </div>
-        <div id="sobremim-section">
-          <div id="sobremim-section-descricao">
-            <p>Estudo programação desde 2003, comecei na época dos sites em <span>Flash</span>, onde a linguagem era ActionScript, porém meu foco não era desenvolver sites e sim jogos.</p>
-            <p>Atualmentou buscando entrar de forma profissional para o mercado de Web Developer, focando inicialmente no Front-End</p>
+        <div id="about-description-texts">
+          <div id="title-description">
+            <h2 class="title">Sobre Mim!</h2>
+          </div>
+          <div id="about-description-text">
+            <div id="text-description">
+              <p>Estudo programação desde 2003, comecei na época dos sites em <span>Flash</span>, onde a linguagem era ActionScript, porém meu foco não era desenvolver sites e sim jogos.</p>
+              <p>E desde então fiquei atuando na área de ministração de aulas de informática em geral (hardware, pacote office, games, desenvolvimento web, design gráfico, entre outros.)</p>
+              <p>Recentemente busquei me especializar na área de Analise e Desenvolvimento de Software, finalizando minha graduação em 06/2024</p>
+              <p>Atualmente estou me especializando em <span>Desenvolvimento Front-End</span>, onde estou me aprofundando em <span>HTML5, CSS3/SASS, JavaScript, ReactJS, Git e Github.</span></p>
+            </div>
           </div>
         </div>
-        <div id="sobremim-footer">
-          <div id="sobremim-footer-tittle">
-            <h2>
-              Conhecimentos Relevantes
-            </h2>
-          </div>
+        <div id="about-description-img">
+          <img src="./src/img/public/i.jpg" alt="">
         </div>
       </div>
-      <div id="img-eu">
-        <h2>Imagem</h2>
+      <div id="about-description-footer">
+        <div id="about-description-footer-title">
+          <h2>Principais Tecnologias de atuação</h2>
+        </div>
+        <div id="about-description-footer-icons">
+          <div id="html">
+            <i class="fa-brands fa-html5"></i>
+            <span>HTML</span>
+          </div>
+          <div id="css">
+            <i class="fa-brands fa-css3-alt"></i>
+            <span>CSS</span>
+          </div>
+          <div id="sass">
+            <i class="fa-brands fa-sass"></i>
+            <span>SASS</span>
+          </div>
+          <div id="js">
+            <i class="fa-brands fa-js"></i>
+            <span>JAVASCRIPT</span>
+          </div>
+          <div id="react">
+            <i class="fa-brands fa-react"></i>
+            <span>REACT</span>
+          </div>
+          <div id="git">
+            <i class="fa-brands fa-git-alt"></i>
+            <span>GIT</span>
+          </div>
+          <div id="github">
+            <i class="fa-brands fa-github"></i>
+            <span>GITHUB</span>
+          </div>
+          <div id="python">
+            <i class="fa-brands fa-python"></i>
+            <span>PYTHON</span>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="bk3">
+    <section id="portfolio">
       <h2>PROJETOS</h2>
-      <div class="container">
+      <div id="portfolio-container">
         <div class="container-item card-1">
           <div class="container-item-bg">
             <h3>VIRTUAL LIFE BRASIL</h3>
-          <button>ACESSAR</button>
+            <button>ACESSAR</button>
           </div>
         </div>
         <div class="container-item card-2">
           <div class="container-item-bg">
             <h3>WORK 2</h3>
-          <button>ACESSAR</button>
+            <button>ACESSAR</button>
           </div>
         </div>
         <div class="container-item card-3">
           <div class="container-item-bg">
             <h3>WORK 2</h3>
-          <button>ACESSAR</button>
+            <button>ACESSAR</button>
+          </div>
+        </div>
+        <div class="container-item card-3">
+          <div class="container-item-bg">
+            <h3>WORK 2</h3>
+            <button>ACESSAR</button>
+          </div>
+        </div>
+        <div class="container-item card-3">
+          <div class="container-item-bg">
+            <h3>WORK 2</h3>
+            <button>ACESSAR</button>
+          </div>
+        </div>
+        <div class="container-item card-3">
+          <div class="container-item-bg">
+            <h3>WORK 2</h3>
+            <button>ACESSAR</button>
           </div>
         </div>
       </div>      
@@ -104,9 +162,9 @@
           <span>&#9743; (011) 91581-6184</span>
         </div>
         <div class="footer-info-social">
-          <div><a target="_blank" href="https://www.linkedin.com/in/anderson-ribiero-campos-01709727/"><img src="imagem/icon/linkedin15.png" alt=""></a></div>
-          <div> <a href="https://github.com/ARibeiroC?tab=repositories" target="_blank"> <img src="imagem/icon/github15.png" alt=""> </a> </div>
-          <div> <a href="#"> <img src="imagem/icon/youtube15.png" alt=""> </a> </div>
+          <div><a target="_blank" href="https://www.linkedin.com/in/anderson-ribiero-campos-01709727/"><img src="./src/img/icon/linkedin15.png" alt=""></a></div>
+          <div> <a href="https://github.com/ARibeiroC?tab=repositories" target="_blank"> <img src="./src/img/icon/github15.png" alt=""> </a> </div>
+          <div> <a href="#"> <img src="./src/img/icon/youtube15.png" alt=""> </a> </div>
         </div>
       </div>
       <div>

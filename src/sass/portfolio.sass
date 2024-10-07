@@ -1,0 +1,43 @@
+@mixin portfolio
+
+#portfolio
+    width: 100%
+    min-height: 100vh
+    height: auto
+    overflow-y: scroll
+    padding-block: $height-header
+    border-bottom: 1px dashed $secundary-text-color
+
+    h2
+        @include title
+        height: 5%
+
+    #portfolio-container
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr 1fr
+        gap: 1rem
+
+        margin: 1rem auto
+        height: 95%
+
+        .container-item
+            width: 95%
+            border-radius: .4rem
+            overflow: hidden
+
+            .container-item-bg
+                @include bg-img('embreve.png')
+                @include flex-align(center, end)
+                gap: 1rem
+                flex-direction: column
+                transition: .4s
+                height: 100%
+                padding: 1rem
+
+            .container-item-bg:hover
+                background-size: 260% 210%
+                filter: none
+
+
+    

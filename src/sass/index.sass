@@ -3,6 +3,7 @@
 @import 'header'
 @import 'home'
 @import 'about'
+@import 'portfolio'
 
 // RESET CONFIGURATION PAGE
 *
@@ -14,137 +15,27 @@ html
 
 body
     @include flex-align(center, flex-start)
+    position: relative
     flex-direction: column
     min-height: 90vh
     height: 100vh
     color: $default-text-color
-    background: url('../img/public/headerbg1300.jpg') no-repeat center center fixed
-    background-blend-mode: darken
-    background-color: rgba(0, 0, 0, 0.8)
-    background-size: cover
+    background: #050505
+    // background: url('../img/public/headerbg1300.jpg') no-repeat center center fixed
+    // background-blend-mode: darken
+    // background-color: rgba(0, 0, 0, 0.8)
+    // background-size: cover
 
 #main-content
     @include flex-align(center, center)
     flex-direction: column
     
-    width: 1200px
+    max-width: 1200px
 
-@include header
-@include home
-@include about
-
-// #about
-//     display: flex
-
-//     min-height: 100vh
-//     padding-block: $height-header
-
-//     #title-about
-//         margin-block: $height-header
-
-//         h2
-//             font-size: 2.5rem
-//             color: magenta
-    // #sobremim
-    //     display: flex
-    //     flex-direction: column
-
-    //     width: 100%
-    //     height: 100%
-    //     // margin-top: 10vh
-
-    //     #title-about
-    //         display: flex
-    //         @include flex-align(center, flex-start)
-
-    //         width: 100%
-    //         height: 20vh
-
-    //         h2
-    //             font-size: 2.5rem
-    //             color: $title-text-color
-    //             text-shadow: 3px 3px 0.2rem #000000c7
-            
-    //     &-section
-    //         width: 100%
-    //         height: 40vh
-
-    //         &-descricao
-    //             display: flex
-    //             flex-direction: column
-
-    //             width: 100%
-    //             text-align: justify
-
-    //             p
-    //                 font-size: 1.5rem
-    //                 font-weight: 600
-    //                 width: 90%
-
-
-    
-    //     &-footer
-    //         @include flex-align(center, center)
-    //         flex-direction: column
-    //         border-top: 2px solid $title-text-color
-
-    //         widows: 100%
-    //         height: 40vh
-
-    //         &-tittle
-    //             @include flex-align(center, left)
-    //             width: 100%
-    //             height: 25%                
-
-    //             h2
-    //                 font-size: 1.5rem
-    //                 color: $title-text-color
-    //                 text-shadow: 2px 1px 0.2rem #000000c7
-
-
-    //         &-conhecimentos
-    //             @include flex-align(flex-start, center)
-
-    //             height: 75%
-    //             width: 100%
-
-    //             .sobremim-footer-content
-    //                 display: flex
-    //                 flex-direction: column
-    //                 @include flex-align(center, space-between)
-
-    //                 width: 20%
-    //                 height: 80%
-
-    //                 .sobremim-footer-content-img
-    //                     display: flex
-    //                     @include flex-align(center, center)
-
-    //                     width: 100%
-    //                     height: 90%
-
-    //                     img
-    //                         width: 60%
-
-
-    //                 .sobremim-footer-content-info
-
-    //                     height: 10%
-    //                     text-align: center
-    //                     font-size: 1.1rem
-    //                     font-weight: 600
-    //                     color: $secundary-text-color
-
-    
-    // #img-eu
-    //     display: flex
-    //     @include flex-align(center, center)
-    //     border: 1.5rem solid #333
-
-    //     width: 60%
-    //     background: url("/imagem/bgabout3500.jpg") no-repeat
-    //     background-size: cover
-    //     margin-top: 10vh
+    @include header
+    @include home
+    @include about
+    @include portfolio
 
 // #bk3
 //     display: flex

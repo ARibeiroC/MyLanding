@@ -13,17 +13,23 @@
    justify-content: #{$justify}
 
 @mixin bg-img($img)
-   background: url('../imagem/works/#{$img}') no-repeat center
-   background-size: 200%
+   background: url('../img/works/#{$img}') no-repeat center
+   background-size: 250% 200%
    filter: grayscale(100%)
-   transition: .6s
 
-   &:hover
-      background-size: 210%
-      filter: none
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../imagem/works/#{$img}')
+@mixin super-title
+   color: $primary-color
+   font-size: 3.5rem
 
+@mixin title
+   color: $secundary-color
+   font-size: 2.5rem
+   text-shadow: 0px 0px 3.5rem
+   padding-block: calc($height-header - 40px)
 
+@mixin subtitle
+   color: $default-text-color
+   font-size: 2rem
 
 // =========================================================================================================
 // BREAKPOINTS
