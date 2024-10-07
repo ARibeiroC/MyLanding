@@ -3,9 +3,9 @@
     #home
         @include flex-align(center, start)
         flex-direction: column
-        gap: 5rem
 
         min-height: 100vh
+        margin-block: $height-header
         border-bottom: 1px dashed $secundary-text-color
 
         .home-tittle
@@ -13,8 +13,7 @@
             @include flex-align(center, center)
             
             width: 100%
-            margin-top: calc($height-header * 2)
-            flex: 1
+            padding: 4rem 0
 
             h1  
                 @include super-title
@@ -25,8 +24,6 @@
         .home-subtitle
             @include flex-align(start,'')
             flex-direction: column
-            flex: 1
-            gap: 5rem
 
             width: 100%
 
@@ -49,9 +46,8 @@
             @include flex-align(center, center)
             flex-direction: column
 
-            flax: 4
             width: 100%
-            height: $height-header*4
+            padding-block: $height-header
             
             span
                 margin-block: 2rem

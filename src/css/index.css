@@ -345,8 +345,8 @@ body {
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  gap: 5rem;
   min-height: 100vh;
+  margin-block: 100px;
   border-bottom: 1px dashed #bebebe;
 }
 #main-content #home .home-tittle {
@@ -355,8 +355,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 200px;
-  flex: 1;
+  padding: 4rem 0;
 }
 #main-content #home .home-tittle h1 {
   color: #00F5FF;
@@ -369,8 +368,6 @@ body {
   display: flex;
   align-items: start;
   flex-direction: column;
-  flex: 1;
-  gap: 5rem;
   width: 100%;
 }
 #main-content #home .home-subtitle h2 {
@@ -400,9 +397,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flax: 4;
   width: 100%;
-  height: 400px;
+  padding-block: 100px;
 }
 #main-content #home #continue span {
   margin-block: 2rem;
