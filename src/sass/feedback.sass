@@ -1,0 +1,47 @@
+@import 'mixins'
+
+@mixin feedback
+
+#feedback
+    @include flex-align(center, start)
+    flex-direction: column
+    min-height: 100vh
+    width: 1200px
+    @include calcHeightHeader
+
+    h2
+        @include title
+        padding-block: 4.5rem
+
+    h3
+        padding-block: 2rem
+
+    form
+        @include flex-align(start, start)
+        flex-direction: column
+        // flex-grow: 4
+
+        border: 1px dashed $default-text-color
+        width: 550px
+        padding: 2rem
+        background-color: $default-text-color
+        border-radius: 10px
+        color: $secundary-color
+        font-weight: 700
+
+        label
+            @include flex-align(flex-start, start)
+            flex-direction: column
+
+            width: 100%
+            border: 1px dashed $default-text-color
+            padding-block: .6rem
+
+            textarea, input
+                padding: .5rem
+                width: 100%
+
+        button
+            @include button($default-text-color, $secundary-color)
+            border: 1px solid transparent
+            align-self: flex-end

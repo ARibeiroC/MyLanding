@@ -4,6 +4,8 @@
 @import 'home'
 @import 'about'
 @import 'portfolio'
+@import 'feedback'
+@import 'footer'
 
 // RESET CONFIGURATION PAGE
 *
@@ -17,25 +19,27 @@ body
     @include flex-align(center, flex-start)
     position: relative
     flex-direction: column
-    min-height: 90vh
+    min-height: 100vh
     height: 100vh
     color: $default-text-color
-    background: #050505
-    // background: url('../img/public/headerbg1300.jpg') no-repeat center center fixed
-    // background-blend-mode: darken
-    // background-color: rgba(0, 0, 0, 0.8)
-    // background-size: cover
+    transition: .4s
 
 #main-content
-    @include flex-align(center, center)
+    @include flex-align(center, flex-start)
+    width: 100%
+    min-height: 100vh
     flex-direction: column
-    
-    max-width: 1200px
+    background: url('../img/public/headerbg1300.jpg') no-repeat
+    background-blend-mode: overlay
+    background-color: rgba(0, 0, 0, .8)
+    background-size: cover
+    background-offset: 0px 0px
 
     @include header
     @include home
     @include about
     @include portfolio
+    @include footer
 
 // #bk3
 //     display: flex

@@ -1,0 +1,49 @@
+@mixin footer
+.footer
+    display: flex
+    flex-direction: column
+    @include flex-align(center, center)
+    gap: 1rem    
+
+    width: 1200px
+    height: 20%
+    background: $secundary-color
+    padding: 2rem
+
+    h3
+        @include title($default-text-color)
+        text-shadow: none
+
+    &-info
+        display: flex
+        gap: 2rem
+        @include flex-align(center, space-between)
+
+        height: 10%
+        padding: 1rem 2rem
+        font-size: 0.9rem
+        font-weight: bold
+        color: $default-text-color
+        // text-shadow: 2px 2px 5px $black-color
+
+        &-contacts
+            display: flex
+            gap: 2rem
+
+        &-social
+            display: flex
+            gap: 2rem
+                
+            a
+                i 
+                    font-size: 1.5rem
+                    text-shadow: 2px 2px 5px $black-color
+
+                .fa-linkedin
+                    color: #0A66C2
+
+                .fa-github
+                    color: #000000
+
+                .fa-youtube
+                    color: #FF0000
