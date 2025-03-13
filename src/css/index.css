@@ -298,7 +298,7 @@
 
 #portfolio {
   width: 1200px;
-  min-height: 100vh;
+  min-height: 85vh;
   height: auto;
   padding-block: 60px;
 }
@@ -318,26 +318,26 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   margin: 1rem auto;
-  height: 85%;
+  min-height: 60%;
   padding: 1rem;
 }
 #portfolio #portfolio-container .container-item {
   border-radius: 0.4rem;
   overflow: hidden;
-  border: 1px dashed magenta;
   transition: 0.4s;
 }
 #portfolio #portfolio-container .container-item .container-item-bg {
   background: url("../img/works/embreve.png") center no-repeat;
-  background-size: 140% 100%;
+  background-size: 200% 160%;
   filter: grayscale(100%);
   display: flex;
   align-items: center;
   justify-content: end;
   justify-self: center;
   align-self: center;
-  transition: 0.4s;
+  transition: 1s;
   height: 100%;
+  width: 100%;
 }
 #portfolio #portfolio-container .container-item .container-item-bg .filter {
   display: flex;
@@ -374,14 +374,16 @@
   box-shadow: 2px 2px 6px #000 inset;
 }
 #portfolio #portfolio-container .container-item .container-item-bg:hover {
-  background-size: 150% 110%;
+  background-size: 100% 80%;
   filter: grayscale(0%);
 }
 #portfolio #portfolio-container .container-item .container-item-bg:hover h3 {
   color: magenta;
 }
 #portfolio #portfolio-container .container-item:hover {
-  border: 1px solid magenta;
+  border: 1px solid #bebebe;
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 15px magenta;
 }
 
 #feedback {
@@ -530,7 +532,7 @@ body {
   min-height: 100vh;
   height: 100vh;
   color: #fff;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 #main-content {

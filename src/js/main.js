@@ -6,10 +6,10 @@ render(data)
 
 document.addEventListener('scroll', () => {
     if(body.getBoundingClientRect().top < -200){
-        body.style.backgroundColor = "rgba(5,5,5,1)"
+        body.style.backgroundColor = "#101010"
         header.style.backgroundColor = "rgba(5,5,5,.8)"
     } else {
-        body.style.backgroundColor = "rgba(5,5,5,.8)"
+        body.style.backgroundColor = "#000"
         header.style.backgroundColor = "rgba(5,5,5,0)"
     }
 }) 

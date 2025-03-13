@@ -2,7 +2,7 @@
 
 #portfolio
     width: 1200px
-    min-height: 100vh
+    min-height: 85vh
     height: auto
     padding-block: calc( $height-header - 40px )
 
@@ -21,21 +21,23 @@
         gap: 1rem
 
         margin: 1rem auto
-        height: 85%
+        min-height: 60%
         padding: 1rem
+        // border: 1px solid white
 
         .container-item
             border-radius: .4rem
             overflow: hidden
-            border: 1px dashed $secundary-color
+            // border: 1px dashed $secundary-color
             transition: .4s
 
             .container-item-bg
                 @include bg-img('embreve.png')
                 @include flex-align(center, end)
 
-                transition: .4s
+                transition: 1s
                 height: 100%
+                width: 100%
 
                 .filter
                     @include flex-align(center, center)
@@ -63,14 +65,24 @@
                         padding: 1rem
 
             .container-item-bg:hover
-                background-size: 150% 110%
-                filter: grayscale(0%)
+                background-size: 100% 80%
+                filter: grayscale(0%)       
 
                 h3
                     color: $secundary-color
         
         .container-item:hover
-            border: 1px solid $secundary-color
+            border: 1px solid $secundary-text-color
+            transform: translateY(-10px)
+            box-shadow: 0px 0px 15px $secundary-color
+
+
+
+        
+        
+
+        
+
 
 
 
